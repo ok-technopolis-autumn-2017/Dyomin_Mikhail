@@ -1,26 +1,57 @@
-<!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-<div id = "topMenu">
-	<div id = "Header">
-	todos
-	</div>
-	<input id = "InputBox">
-	</input>
-	<div id = "tasks">
-		<div class = "task">
-			<input type = "checkbox">html</input>
-		</div>
-	</div>
-	<div id = "bottomMenu">
-		<div id = "itemsLeft"> Items Left </div>
-		<button> All </button>
-		<button> Active </button>
-		<button> Completed </button>
-		<button> Clear completed </button>
-	</div>
-</div>
-</body>
+    <head>
+        <title> Todo list </title>
+    </head>
+    <body>
+    <div class="header" aria-label="todos">
+        <h1 class = "header-title">todos</h1>
+    </div>
+
+    <div class = "todosBox">
+        <div class = "todosBox-addField">
+            <button class = "todosBox-addField_add">
+            </button>
+
+            <input class = "todosBox-addField_input" placeholder="Добавить"/>
+        </div>
+
+        <div class = "todosBox-list">
+            <div class = "todosBox-list-line">
+                <input type = "checkbox" checked = "true"
+                       class = "todosBox-list-line_check __true"/>
+                HTML
+                <button class = "todosBox-list-line_remove"/>
+            </div>
+            <div class = "todosBox-list-line">
+                <input type = "checkbox" checked = "false"
+                       class = "todosBox-list-line_check __false"/>
+                CSS
+                <button class = "todosBox-list-line_remove"/>
+            </div>
+        </div>
+
+        <div class = "todosBox-actionPanel">
+            <div class = "todosBox-actionPanel_itemsLeft">
+            n items left
+            </div>
+            <div class = "todosBox-actionPanel-actButtons">
+                <button class = "todosBox-actionPanel-actionButtons_filter __active"
+                        data-filter  = "All">
+                    All
+                </button>
+                <button class = "todosBox-actionPanel-actionButtons_filter __active"
+                        data-filter = "Active">
+                    Active
+                </button>
+                <button class = "todosBox-actionPanel-actionButtons_filter __active"
+                        data-filter = "Completed">
+                    Completed
+                </button>
+            </div>
+            <button class = "todosBox-actionPanel_clearCompleted">
+            Clear Completed
+            </button>
+        </div>
+    </div>
+    </body>
 </html>
